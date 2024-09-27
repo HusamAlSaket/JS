@@ -1,4 +1,4 @@
-alert("open console to check the values");
+// alert("open console to check the values");
 let cash =1000;
 let currentLiabilities =500;
 let cashFlow = cash / currentLiabilities;
@@ -95,4 +95,94 @@ let arr6 = [...arr];
 console.log(arr6); 
 let arr7 = [arr[0], arr[arr.length - 1]];
 console.log(arr7);
+var fruit = ["banana", "apple", "orange", "watermelon"];
+var vegetables = ["carrot", "tomato", "pepper", "lettuce"];
+vegetables.pop();
+console.log(vegetables);
+fruit.shift();
+console.log(fruit);
+console.log(fruit.indexOf("orange"));
+fruit.push(1);
+console.log(fruit);
+console.log(fruit.length);
+vegetables.push(4);
+console.log(vegetables);
+let food =[...vegetables, ...fruits];
+console.log(food);
+ const kiwi = ["Banana", "Orange", "Apple", "Mango"];
+const fruits2 = kiwi.reverse();
+console.log(fruits2);
+console.log(food.splice(4,2));
 
+function stringToArray(str) {
+    return str.split(' ');
+}
+
+
+let input = "Orange Jordan";
+let output = stringToArray(input);
+console.log(output); 
+
+
+function hidePhoneNumber(phoneNumber) {
+
+    phoneNumber = phoneNumber.toString();
+  
+    let hiddenPart = '*******';
+    let visiblePart = phoneNumber.slice(7);
+    return hiddenPart + visiblePart;
+}
+
+function hideEmail(email) {
+    // Split the email into two parts: before and after the '@' symbol
+    let [localPart, domain] = email.split('@');
+    // Replace part of the local part with '...'
+    let hiddenLocalPart = localPart.slice(0, 6) + '...';
+    // Combine the hidden local part with the domain
+    return hiddenLocalPart + '@' + domain;
+}
+
+
+let input7 = "orange_academy@orange.jo";
+let output3 = hideEmail(input7);
+console.log(output3); // orange...@orange.jo
+
+const capitalizeEveryWordd= str =>
+    str.replace(/\b[a-z]/g, char => char.toUpperCase());
+var myvariable = "coding academy by orange"
+console.log(capitalizeEveryWordd(myvariable));
+
+
+let num1 = 92485;
+let resultt = num1.toString().split('').reverse().join('');
+console.log(resultt);
+ 
+function swapWithTemp(a, b) {
+    let temp = a;
+    a = b;
+    b = temp;
+    return {a, b};
+}
+
+let result1 = swapWithTemp(3, 4);
+console.log(result1); 
+
+function swapWithDestructuring(a, b) {
+    [a, b] = [b, a];
+    return {a, b};
+}
+
+let result2 = swapWithDestructuring(3, 4);
+console.log(result2);
+function swapWithArithmetic(a, b) {
+    a = a + b;
+    b = a - b;
+    a = a - b;
+    return {a, b};
+}
+
+let result3 = swapWithArithmetic(3, 4);
+
+console.log(result3); 
+var str = "orange";
+str = str.slice(0, 3) + str.slice(4);
